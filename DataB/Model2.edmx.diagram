@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="aa37c29126184dfd8423b405646efeea" Name="Diagram1" ZoomLevel="86">
+        <EntityTypeShape EntityType="Ctrl_TestModel.apConfig" Width="1.5" PointX="15.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.apFormaPago" Width="1.5" PointX="8.25" PointY="58.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.apProveedore" Width="1.5" PointX="10.5" PointY="65.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.apProveedoresContacto" Width="1.5" PointX="12.75" PointY="55.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.apProveedoresTipo" Width="1.5" PointX="8.25" PointY="61.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.arCliente" Width="1.5" PointX="13.5" PointY="59.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.arClientesClase" Width="1.5" PointX="12.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.arClientesContacto" Width="1.5" PointX="15.75" PointY="67.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.arClientesDocumento" Width="1.5" PointX="15.75" PointY="70.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.arClientesTipo" Width="1.5" PointX="8.25" PointY="65.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.arConfig" Width="1.5" PointX="15.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.arCredito" Width="1.5" PointX="10.5" PointY="97.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.arCreditosDetalle" Width="1.5" PointX="12.75" PointY="98.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.arDebito" Width="1.5" PointX="10.5" PointY="102.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.arDescuento" Width="1.5" PointX="8.25" PointY="89.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.arFactura" Width="1.5" PointX="18.75" PointY="86.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.arFacturasDescuento" Width="1.5" PointX="21" PointY="87.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.arFacturasDetalle" Width="1.5" PointX="3" PointY="69.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.arFacturasTax" Width="1.5" PointX="21" PointY="92" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.arMetodoPago" Width="1.5" PointX="8.25" PointY="71.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.arNotaCreditoTipo" Width="1.5" PointX="8.25" PointY="98.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.arNotaDebitoTipo" Width="1.5" PointX="8.25" PointY="104.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.arRecibo" Width="1.5" PointX="10.75" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.arRecibosDetalle" Width="1.5" PointX="13" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.arRecibosMetodo" Width="1.5" PointX="13" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.arServicioClase" Width="1.5" PointX="8.25" PointY="126.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.arServicio" Width="1.5" PointX="10.5" PointY="128.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.arServicioTipo" Width="1.5" PointX="8.25" PointY="135.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.arTerminoCredito" Width="1.5" PointX="11.25" PointY="62.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.bnBanco" Width="1.5" PointX="11.25" PointY="74.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.bnConfig" Width="1.5" PointX="17.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.bnMoneda" Width="1.5" PointX="8.25" PointY="82.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.gcCodigosDeduccion" Width="1.5" PointX="17.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.gcConfig" Width="1.5" PointX="17.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.gcOrdenPago" Width="1.5" PointX="3" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.gcOrdenPagoDed" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.gcPrestamo" Width="1.5" PointX="0.75" PointY="19.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.gcPrestamosAmor" Width="1.5" PointX="3" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.gcPrestamosAmorMov" Width="1.5" PointX="3" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.gcPrestamosAmorMovDet" Width="1.5" PointX="3" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.gcPrestamosAvale" Width="1.5" PointX="3" PointY="20.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.gcPrestamosDoc" Width="1.5" PointX="3" PointY="24.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.gcPrestamosGar" Width="1.5" PointX="3" PointY="27.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.gcPrestamosRefCom" Width="1.5" PointX="3" PointY="30.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.gcPrestamosRefFin" Width="1.5" PointX="3" PointY="33.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.gcPrestamosRefPer" Width="1.5" PointX="3" PointY="37.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.gcPrestamosReq" Width="1.5" PointX="3" PointY="40.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.gcPrestamosTipo" Width="1.5" PointX="5.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.gcPrestamosTipoDoc" Width="1.5" PointX="8" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.gcPrestamosTipoReq" Width="1.5" PointX="8" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.gcRequisitosPrestamo" Width="1.5" PointX="17.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.gcTiposGarantia" Width="1.5" PointX="17.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.glCuenta" Width="1.5" PointX="6" PointY="69.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.glCuentasCategoria" Width="1.5" PointX="3.75" PointY="66" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.glCuentasGrupo" Width="1.5" PointX="3.75" PointY="77.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.glCuentasSubGrupo" Width="1.5" PointX="3.75" PointY="80.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.icAjusteClase" Width="1.5" PointX="8.25" PointY="112.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.icAjuste" Width="1.5" PointX="13.5" PointY="115.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.icAjustesDetalle" Width="1.5" PointX="15.75" PointY="126" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.icAlmacene" Width="1.5" PointX="8.25" PointY="117.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.icBine" Width="1.5" PointX="10.5" PointY="115.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.icClasificacion" Width="1.5" PointX="11.25" PointY="125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.icConfig" Width="1.5" PointX="5.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.icDepto" Width="1.5" PointX="0.75" PointY="71.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.icFabricante" Width="1.5" PointX="11.25" PointY="135.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.icGrupo" Width="1.5" PointX="11.25" PointY="138.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.icInventarioFisico" Width="1.5" PointX="10.5" PointY="119.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.icInventarioFisicoDetalle" Width="1.5" PointX="18.75" PointY="122.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.icLinea" Width="1.5" PointX="11.25" PointY="140.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.icMiscelaneo" Width="1.5" PointX="13.5" PointY="151.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.icPresentacion" Width="1.5" PointX="11.25" PointY="143.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.icProducto" Width="1.5" PointX="13.5" PointY="126.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.icProductosBitacora" Width="1.5" PointX="7.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.icProductosEspMiscelaneo" Width="1.5" PointX="15.75" PointY="131.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.icProductosInventario" Width="1.5" PointX="18.75" PointY="127.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.icRecepcione" Width="1.5" PointX="12.75" PointY="90.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.icRecepcionesDetalle" Width="1.5" PointX="18.75" PointY="114.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.icRequisicionClase" Width="1.5" PointX="8.25" PointY="94.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.icRequisicionesSalida" Width="1.5" PointX="10.5" PointY="92.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.icRequisicionesSalidaDetalle" Width="1.5" PointX="15.75" PointY="113.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.icRequisicionesTransf" Width="1.5" PointX="13.5" PointY="120.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.icRequisicionesTransfDetalle" Width="1.5" PointX="18.75" PointY="130.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.icTipoInventario" Width="1.5" PointX="11.25" PointY="145.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.icTipoInventarioCtasCosto" Width="1.5" PointX="8.25" PointY="75.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.icTipoInventarioCtasIngreso" Width="1.5" PointX="8.25" PointY="78.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.icTipoMiscelaneo" Width="1.5" PointX="11.25" PointY="151.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.icUnidadMedida" Width="1.5" PointX="11.25" PointY="148.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.posCategoria" Width="1.5" PointX="7.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.posCategoriasModi" Width="1.5" PointX="10" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.posCategoriasProducto" Width="1.5" PointX="10" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.posConfig" Width="1.5" PointX="19.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.posOrdene" Width="1.5" PointX="10.75" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.posOrdenesDetalle" Width="1.5" PointX="13" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.posTurno" Width="1.5" PointX="16.5" PointY="117.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.posTurnosTabla" Width="1.5" PointX="14.25" PointY="109.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.posVendedore" Width="1.5" PointX="16.5" PointY="82.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.SysCAI" Width="1.5" PointX="15.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.SysCAITerminale" Width="1.5" PointX="18" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.sysdiagram" Width="1.5" PointX="19.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.SysRutaProceso" Width="1.5" PointX="5.75" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.SysRutaProcesosDet" Width="1.5" PointX="8" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.SysRutaProcesosWF" Width="1.5" PointX="19.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.SysSucursale" Width="1.5" PointX="12.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.SysTax" Width="1.5" PointX="8.25" PointY="130" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.SysTerminale" Width="1.5" PointX="15" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.SysTiposDocumento" Width="1.5" PointX="19.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.viewDeptosCuentasCosto" Width="1.5" PointX="20.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.viewDeptosCuentasIngreso" Width="1.5" PointX="20.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ctrl_TestModel.viewMiscelaneo" Width="1.5" PointX="9.75" PointY="20.75" IsExpanded="true" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_apFormaPago_apProveedores" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_apFormaPago_icRecepciones" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_apProveedores_Contactos" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_apProveedores_icRecepciones" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_apProveedoresTipo_apProveedores" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_bnMonedas_apProveedores" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_glCuentas_apProveedores" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_glCuentas_apProveedoresTipo_CxP" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_glCuentas_apProveedoresTipo_Des" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_glCuentas_apProveedoresTipo_Pue" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_aglCuentas_arClientes" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_arClientes_arFacturas" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_arClientes_Contactos" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_arClientes_Documentos" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_arClientes_Tipo" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_arTerminoCredito_arClientes" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_glCuentas_arClientesTipo" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_arCreditos_Detalle" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_arNotaCreditoTipo_arCreditos" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_arNotaDebitoTipo_arDebito" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_glCuentas_arDescuentos" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_arFacturas_Descuento" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_arFacturas_Detalle" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_arFacturas_Tax" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_arTerminoCredito_arFacturas" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_icAlmacenes_arFacturas" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_posTurnos_arFacturas" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_posVendedores_arFacturas" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_icDeptos_arFacturasDetalle" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_SysTaxes_arFacturasDetalle" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_bnBancos_arMetodoPago" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_glCuentas_arMetodoPago" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_glCuentas_arNotaCreditoTipo" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_glCuentas_arNotaDebitoTipo" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_arRecibos_Detalle" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_arRecibos_Metodos" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_arServicios_Clase" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_arServicios_Tipo" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_SysTaxes_arServicios" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_bnMonedas_bnBancos" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_glCuentas_bnBancos" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_bnMonedas_icRecepciones" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_gcOrdenPago_Ded" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_gcOrdenPago_Prestamos" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_gcPrestamos_Amor" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_gcPrestamos_AmorMov" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_gcPrestamos_AmorMovDet" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_gcPrestamos_Avales" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_gcPrestamos_Doc" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_gcPrestamos_Gar" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_gcPrestamos_RefCom" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_gcPrestamos_RefFin" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_gcPrestamos_RefPer" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_gcPrestamos_Req" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_gcPrestamosTipo_Doc" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_gcPrestamosTipo_Req" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_glCuentas_AP_SysTaxes" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_glCuentas_AR_SysTaxes" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_glCuentas_icAjusteClase" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_glCuentas_icAlmacenes" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_glCuentasCategoria_glCuentas" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_glCuentasGrupo_glCuentas" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_glCuentasSubGrupo_glCuentas" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_icDeptos_glCuentas" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.glCuentas_icTipoInventarioCtasCostos" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.glCuentas_icTipoInventarioCtasIngresos" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_glCuentasCategoria_Grupo" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_glCuentasGrupo_SubGrupo" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_icAjusteClase_icReqTransfDetalle" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_icAjustes_Detalle" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_icAlmacenes_icReqTransfDetalle" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_icProductos_icAjustesDetalle" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_icAlmacen_icBines" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_icAlmacenes_icInventarioFisico" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_icAlmacenes_icProductosInventario" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_icAlmacenes_icRecepciones" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_icAlmacenes_icRequisicionesSalida" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_icAlmacenes_icRequisicionesTransfD" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_icAlmacenes_icRequisicionesTransfO" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_icAlmacenes_posTurnos" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_icBines_icInventarioFisicoDetalle" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_icBines_icProductosInventario" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_icBines_icRecepcionesDetalle" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_icBines_icReqSalidaDetalle" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_icBines_icReqTransfDetalleD" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_icBines_icReqTransfDetalleO" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_icClasificacion_icProductos" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_icDeptos_icRequisicionesSalida" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.icDeptos_icTipoInventarioCtasCostos" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.icDeptos_icTipoInventarioCtasIngresos" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_icFabricante_icProductos" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_icGrupo_icProductos" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_icInventarioFisico_Detalle" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_icProductos_icInventarioFisicoDetalle" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_icLinea_icProductos" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_icMiscelaneo_icProdcutosEsp" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_icTipoMiscelaneo_icMiscelaneo" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_icPresentacion_icProductos" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_icProductos_icRecepcionesDetalle" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_icProductos_icReqSalidaDetalle" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_icProductos_icReqTransfDetalle" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_icProductos_Inventario" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_icProductosEspMiscelaneo_icProductos" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_icTipoInventario_icProductos" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_icUnidadMedida_icProductos" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_SysTaxes_icProductos" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_icTipoMiscelaneo_icProdcutosEsp" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_icRecepciones_Detalle" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_SysTaxes_icRecepcionesDetalle" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_icReqClase_icRequisicionesSalida" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_icReqClase_icRequisicionesTransf" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_icRequisicionesSalida_Detalle" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_icReqTransf_Detalle" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_icTipoInventario_CtasCostos" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_icTipoInventario_CtasIngresos" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_posCategorias_Modi" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_posCategorias_Productos" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_posOrdenes_Detalle" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_posTurnosTabla_Turnos" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_SysCAI_Terminales" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_SysRutaProcesos_Det" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.FK_SysTerminales_Sucursales" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.icDeptosCtasCostos" ManuallyRouted="false" />
+        <AssociationConnector Association="Ctrl_TestModel.icDeptosCtasIngresos" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

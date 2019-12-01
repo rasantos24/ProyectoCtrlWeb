@@ -1,0 +1,436 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CtrlSetup_TestModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="SysCiudade">
+    <Key>
+      <PropertyRef Name="IdCiudad" />
+    </Key>
+    <Property Name="IdCiudad" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IdEstado" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="SysEstado" Relationship="Self.FK_SysEstados_SysCiudades" FromRole="SysCiudades" ToRole="SysEstados" />
+  </EntityType>
+  <EntityType Name="SysCompania">
+    <Key>
+      <PropertyRef Name="IdCompania" />
+    </Key>
+    <Property Name="IdCompania" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Compania" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Slogan" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="RazonSocial" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="NumeroRTN" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IdMoneda" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ClaveActivacion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Direccion1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Direccion2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Telefono1" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Telefono2" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Fax" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="EmailEnFactura" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="Web" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="Logo" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Skin" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ColorReporte" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="cNameServer" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cDataBase" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cIdUser" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cPassword" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FechaCreado" Type="DateTime" Precision="3" />
+    <Property Name="lStatus" Type="Boolean" />
+    <NavigationProperty Name="SysFormAccesos" Relationship="Self.FK_SysCompanias_SysFormAccesos" FromRole="SysCompanias" ToRole="SysFormAccesos" />
+    <NavigationProperty Name="SysProcesosAccesos" Relationship="Self.FK_SysCompanias_SysProcesosAccesos" FromRole="SysCompanias" ToRole="SysProcesosAccesos" />
+  </EntityType>
+  <EntityType Name="SysCompaniasModulo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdCompania" Type="Int32" />
+    <Property Name="IdModulo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="ClaveActivacion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="lstatus" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="SysEstado">
+    <Key>
+      <PropertyRef Name="IdEstado" />
+    </Key>
+    <Property Name="IdEstado" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IdPais" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="SysCiudades" Relationship="Self.FK_SysEstados_SysCiudades" FromRole="SysEstados" ToRole="SysCiudades" />
+    <NavigationProperty Name="SysPais" Relationship="Self.FK_SysPaises_SysEstados" FromRole="SysEstados" ToRole="SysPaises" />
+  </EntityType>
+  <EntityType Name="SysForm">
+    <Key>
+      <PropertyRef Name="IdForm" />
+    </Key>
+    <Property Name="IdForm" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IdModulo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="SysFormAccesos" Relationship="Self.FK_SysForm_SysFormAccesos" FromRole="SysForm" ToRole="SysFormAccesos" />
+    <NavigationProperty Name="SysProcesosAccesos" Relationship="Self.FK_SysForm_SysProcesosAccesos" FromRole="SysForm" ToRole="SysProcesosAccesos" />
+    <NavigationProperty Name="SysModulo" Relationship="Self.FK_SysModulos_SysForm" FromRole="SysForm" ToRole="SysModulos" />
+  </EntityType>
+  <EntityType Name="SysFormAcceso">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdCompania" Type="Int32" />
+    <Property Name="IdGrupoUsuario" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="IdModulo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="IdForm" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="Consultar" Type="Boolean" />
+    <Property Name="Nuevo" Type="Boolean" />
+    <Property Name="Editar" Type="Boolean" />
+    <Property Name="Eliminar" Type="Boolean" />
+    <Property Name="Imprimir" Type="Boolean" />
+    <NavigationProperty Name="SysCompania" Relationship="Self.FK_SysCompanias_SysFormAccesos" FromRole="SysFormAccesos" ToRole="SysCompanias" />
+    <NavigationProperty Name="SysForm" Relationship="Self.FK_SysForm_SysFormAccesos" FromRole="SysFormAccesos" ToRole="SysForm" />
+    <NavigationProperty Name="SysUsuariosGrupos" Relationship="Self.FK_SysUsuariosGrupos_SysFormAccesos" FromRole="SysFormAccesos" ToRole="SysUsuariosGrupos" />
+  </EntityType>
+  <EntityType Name="SysModulo">
+    <Key>
+      <PropertyRef Name="IdModulo" />
+    </Key>
+    <Property Name="IdModulo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="SysForms" Relationship="Self.FK_SysModulos_SysForm" FromRole="SysModulos" ToRole="SysForm" />
+  </EntityType>
+  <EntityType Name="SysPais">
+    <Key>
+      <PropertyRef Name="IdPais" />
+    </Key>
+    <Property Name="IdPais" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="SysEstados" Relationship="Self.FK_SysPaises_SysEstados" FromRole="SysPaises" ToRole="SysEstados" />
+  </EntityType>
+  <EntityType Name="SysProceso">
+    <Key>
+      <PropertyRef Name="IdProceso" />
+    </Key>
+    <Property Name="IdProceso" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IdModulo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="IdForm" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="SysProcesosAccesos" Relationship="Self.FK_SysProcesos_SysProcesosAccesos" FromRole="SysProcesos" ToRole="SysProcesosAccesos" />
+  </EntityType>
+  <EntityType Name="SysProcesosAcceso">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdCompania" Type="Int32" />
+    <Property Name="IdGrupoUsuario" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="IdModulo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="IdForm" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="IdProceso" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="Acceso" Type="Boolean" />
+    <NavigationProperty Name="SysCompania" Relationship="Self.FK_SysCompanias_SysProcesosAccesos" FromRole="SysProcesosAccesos" ToRole="SysCompanias" />
+    <NavigationProperty Name="SysForm" Relationship="Self.FK_SysForm_SysProcesosAccesos" FromRole="SysProcesosAccesos" ToRole="SysForm" />
+    <NavigationProperty Name="SysProceso" Relationship="Self.FK_SysProcesos_SysProcesosAccesos" FromRole="SysProcesosAccesos" ToRole="SysProcesos" />
+    <NavigationProperty Name="SysUsuariosGrupos" Relationship="Self.FK_SysUsuariosGrupos_SysProcesosAccesos" FromRole="SysProcesosAccesos" ToRole="SysUsuariosGrupos" />
+  </EntityType>
+  <EntityType Name="SysUsuario">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdUsuario" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nombre" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="Clave" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="IdGrupoUsuario" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="IdCompania" Type="Int32" />
+    <Property Name="Direccion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Telefono" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Notas" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Skin" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TiempoVisibleInicio" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="TiempoVisibleFinal" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="TiempoTrabajoInicio" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="TiempoTrabajoFinal" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="TiempoEscala" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="UsuarioAdmin" Type="Boolean" Nullable="false" />
+    <Property Name="UsuarioDeCaja" Type="Boolean" Nullable="false" />
+    <Property Name="TurnoAbierto" Type="Boolean" Nullable="false" />
+    <Property Name="FechaCreado" Type="DateTime" Precision="3" />
+    <Property Name="lStatus" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="SysUsuariosGrupos" Relationship="Self.FK_SysGrupos_SysUsuarios" FromRole="SysUsuarios" ToRole="SysUsuariosGrupos" />
+  </EntityType>
+  <EntityType Name="SysUsuariosGrupos">
+    <Key>
+      <PropertyRef Name="IdGrupoUsuario" />
+    </Key>
+    <Property Name="IdGrupoUsuario" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="SysFormAccesos" Relationship="Self.FK_SysUsuariosGrupos_SysFormAccesos" FromRole="SysUsuariosGrupos" ToRole="SysFormAccesos" />
+    <NavigationProperty Name="SysProcesosAccesos" Relationship="Self.FK_SysUsuariosGrupos_SysProcesosAccesos" FromRole="SysUsuariosGrupos" ToRole="SysProcesosAccesos" />
+    <NavigationProperty Name="SysUsuarios" Relationship="Self.FK_SysGrupos_SysUsuarios" FromRole="SysUsuariosGrupos" ToRole="SysUsuarios" />
+  </EntityType>
+  <EntityType Name="viewPais">
+    <Key>
+      <PropertyRef Name="IdPais" />
+      <PropertyRef Name="IdEstado" />
+      <PropertyRef Name="Estado" />
+      <PropertyRef Name="IdCiudad" />
+      <PropertyRef Name="Ciudad" />
+    </Key>
+    <Property Name="IdPais" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Pais" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="IdEstado" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Estado" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IdCiudad" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Ciudad" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_SysEstados_SysCiudades">
+    <End Role="SysEstados" Type="Self.SysEstado" Multiplicity="1" />
+    <End Role="SysCiudades" Type="Self.SysCiudade" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysEstados">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="SysCiudades">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SysCompanias_SysFormAccesos">
+    <End Role="SysCompanias" Type="Self.SysCompania" Multiplicity="0..1" />
+    <End Role="SysFormAccesos" Type="Self.SysFormAcceso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysCompanias">
+        <PropertyRef Name="IdCompania" />
+      </Principal>
+      <Dependent Role="SysFormAccesos">
+        <PropertyRef Name="IdCompania" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SysCompanias_SysProcesosAccesos">
+    <End Role="SysCompanias" Type="Self.SysCompania" Multiplicity="0..1" />
+    <End Role="SysProcesosAccesos" Type="Self.SysProcesosAcceso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysCompanias">
+        <PropertyRef Name="IdCompania" />
+      </Principal>
+      <Dependent Role="SysProcesosAccesos">
+        <PropertyRef Name="IdCompania" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SysPaises_SysEstados">
+    <End Role="SysPaises" Type="Self.SysPais" Multiplicity="1" />
+    <End Role="SysEstados" Type="Self.SysEstado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysPaises">
+        <PropertyRef Name="IdPais" />
+      </Principal>
+      <Dependent Role="SysEstados">
+        <PropertyRef Name="IdPais" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SysForm_SysFormAccesos">
+    <End Role="SysForm" Type="Self.SysForm" Multiplicity="0..1" />
+    <End Role="SysFormAccesos" Type="Self.SysFormAcceso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysForm">
+        <PropertyRef Name="IdForm" />
+      </Principal>
+      <Dependent Role="SysFormAccesos">
+        <PropertyRef Name="IdForm" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SysForm_SysProcesosAccesos">
+    <End Role="SysForm" Type="Self.SysForm" Multiplicity="0..1" />
+    <End Role="SysProcesosAccesos" Type="Self.SysProcesosAcceso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysForm">
+        <PropertyRef Name="IdForm" />
+      </Principal>
+      <Dependent Role="SysProcesosAccesos">
+        <PropertyRef Name="IdForm" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SysModulos_SysForm">
+    <End Role="SysModulos" Type="Self.SysModulo" Multiplicity="0..1" />
+    <End Role="SysForm" Type="Self.SysForm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysModulos">
+        <PropertyRef Name="IdModulo" />
+      </Principal>
+      <Dependent Role="SysForm">
+        <PropertyRef Name="IdModulo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SysUsuariosGrupos_SysFormAccesos">
+    <End Role="SysUsuariosGrupos" Type="Self.SysUsuariosGrupos" Multiplicity="0..1" />
+    <End Role="SysFormAccesos" Type="Self.SysFormAcceso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysUsuariosGrupos">
+        <PropertyRef Name="IdGrupoUsuario" />
+      </Principal>
+      <Dependent Role="SysFormAccesos">
+        <PropertyRef Name="IdGrupoUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SysProcesos_SysProcesosAccesos">
+    <End Role="SysProcesos" Type="Self.SysProceso" Multiplicity="0..1" />
+    <End Role="SysProcesosAccesos" Type="Self.SysProcesosAcceso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysProcesos">
+        <PropertyRef Name="IdProceso" />
+      </Principal>
+      <Dependent Role="SysProcesosAccesos">
+        <PropertyRef Name="IdProceso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SysUsuariosGrupos_SysProcesosAccesos">
+    <End Role="SysUsuariosGrupos" Type="Self.SysUsuariosGrupos" Multiplicity="0..1" />
+    <End Role="SysProcesosAccesos" Type="Self.SysProcesosAcceso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysUsuariosGrupos">
+        <PropertyRef Name="IdGrupoUsuario" />
+      </Principal>
+      <Dependent Role="SysProcesosAccesos">
+        <PropertyRef Name="IdGrupoUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SysGrupos_SysUsuarios">
+    <End Role="SysUsuariosGrupos" Type="Self.SysUsuariosGrupos" Multiplicity="0..1" />
+    <End Role="SysUsuarios" Type="Self.SysUsuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysUsuariosGrupos">
+        <PropertyRef Name="IdGrupoUsuario" />
+      </Principal>
+      <Dependent Role="SysUsuarios">
+        <PropertyRef Name="IdGrupoUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CtrlSetup_TestEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="SysCiudades" EntityType="Self.SysCiudade" />
+    <EntitySet Name="SysCompanias" EntityType="Self.SysCompania" />
+    <EntitySet Name="SysCompaniasModulos" EntityType="Self.SysCompaniasModulo" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="SysEstados" EntityType="Self.SysEstado" />
+    <EntitySet Name="SysForms" EntityType="Self.SysForm" />
+    <EntitySet Name="SysFormAccesos" EntityType="Self.SysFormAcceso" />
+    <EntitySet Name="SysModulos" EntityType="Self.SysModulo" />
+    <EntitySet Name="SysPaises" EntityType="Self.SysPais" />
+    <EntitySet Name="SysProcesos" EntityType="Self.SysProceso" />
+    <EntitySet Name="SysProcesosAccesos" EntityType="Self.SysProcesosAcceso" />
+    <EntitySet Name="SysUsuarios" EntityType="Self.SysUsuario" />
+    <EntitySet Name="SysUsuariosGrupos" EntityType="Self.SysUsuariosGrupos" />
+    <EntitySet Name="viewPaises" EntityType="Self.viewPais" />
+    <AssociationSet Name="FK_SysEstados_SysCiudades" Association="Self.FK_SysEstados_SysCiudades">
+      <End Role="SysEstados" EntitySet="SysEstados" />
+      <End Role="SysCiudades" EntitySet="SysCiudades" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SysCompanias_SysFormAccesos" Association="Self.FK_SysCompanias_SysFormAccesos">
+      <End Role="SysCompanias" EntitySet="SysCompanias" />
+      <End Role="SysFormAccesos" EntitySet="SysFormAccesos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SysCompanias_SysProcesosAccesos" Association="Self.FK_SysCompanias_SysProcesosAccesos">
+      <End Role="SysCompanias" EntitySet="SysCompanias" />
+      <End Role="SysProcesosAccesos" EntitySet="SysProcesosAccesos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SysPaises_SysEstados" Association="Self.FK_SysPaises_SysEstados">
+      <End Role="SysPaises" EntitySet="SysPaises" />
+      <End Role="SysEstados" EntitySet="SysEstados" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SysForm_SysFormAccesos" Association="Self.FK_SysForm_SysFormAccesos">
+      <End Role="SysForm" EntitySet="SysForms" />
+      <End Role="SysFormAccesos" EntitySet="SysFormAccesos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SysForm_SysProcesosAccesos" Association="Self.FK_SysForm_SysProcesosAccesos">
+      <End Role="SysForm" EntitySet="SysForms" />
+      <End Role="SysProcesosAccesos" EntitySet="SysProcesosAccesos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SysModulos_SysForm" Association="Self.FK_SysModulos_SysForm">
+      <End Role="SysModulos" EntitySet="SysModulos" />
+      <End Role="SysForm" EntitySet="SysForms" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SysUsuariosGrupos_SysFormAccesos" Association="Self.FK_SysUsuariosGrupos_SysFormAccesos">
+      <End Role="SysUsuariosGrupos" EntitySet="SysUsuariosGrupos" />
+      <End Role="SysFormAccesos" EntitySet="SysFormAccesos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SysProcesos_SysProcesosAccesos" Association="Self.FK_SysProcesos_SysProcesosAccesos">
+      <End Role="SysProcesos" EntitySet="SysProcesos" />
+      <End Role="SysProcesosAccesos" EntitySet="SysProcesosAccesos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SysUsuariosGrupos_SysProcesosAccesos" Association="Self.FK_SysUsuariosGrupos_SysProcesosAccesos">
+      <End Role="SysUsuariosGrupos" EntitySet="SysUsuariosGrupos" />
+      <End Role="SysProcesosAccesos" EntitySet="SysProcesosAccesos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SysGrupos_SysUsuarios" Association="Self.FK_SysGrupos_SysUsuarios">
+      <End Role="SysUsuariosGrupos" EntitySet="SysUsuariosGrupos" />
+      <End Role="SysUsuarios" EntitySet="SysUsuarios" />
+    </AssociationSet>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(CtrlSetup_TestModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(CtrlSetup_TestModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_InsertSysFormAccesos">
+      <Parameter Name="IdCompania" Mode="In" Type="Int32" />
+      <Parameter Name="IdGrupoUsuario" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_InsertSysProcesosAccesos">
+      <Parameter Name="IdCompania" Mode="In" Type="Int32" />
+      <Parameter Name="IdGrupoUsuario" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+  </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+</Schema>

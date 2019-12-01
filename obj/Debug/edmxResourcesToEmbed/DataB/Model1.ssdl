@@ -1,0 +1,415 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CtrlSetup_TestModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="SysCiudades">
+    <Key>
+      <PropertyRef Name="IdCiudad" />
+    </Key>
+    <Property Name="IdCiudad" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="IdEstado" Type="varchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SysCompanias">
+    <Key>
+      <PropertyRef Name="IdCompania" />
+    </Key>
+    <Property Name="IdCompania" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Compania" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Slogan" Type="varchar" MaxLength="100" />
+    <Property Name="RazonSocial" Type="varchar" MaxLength="100" />
+    <Property Name="NumeroRTN" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="IdMoneda" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="ClaveActivacion" Type="text" Nullable="false" />
+    <Property Name="Direccion1" Type="varchar" MaxLength="100" />
+    <Property Name="Direccion2" Type="varchar" MaxLength="100" />
+    <Property Name="Telefono1" Type="varchar" MaxLength="15" />
+    <Property Name="Telefono2" Type="varchar" MaxLength="15" />
+    <Property Name="Fax" Type="varchar" MaxLength="15" />
+    <Property Name="Email" Type="varchar" MaxLength="80" />
+    <Property Name="EmailEnFactura" Type="varchar" MaxLength="80" />
+    <Property Name="Web" Type="varchar" MaxLength="80" />
+    <Property Name="Logo" Type="image" />
+    <Property Name="Skin" Type="varchar" MaxLength="30" />
+    <Property Name="ColorReporte" Type="varchar" MaxLength="60" />
+    <Property Name="cNameServer" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="cDataBase" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="cIdUser" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="cPassword" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="FechaCreado" Type="datetime" />
+    <Property Name="lStatus" Type="bit" />
+  </EntityType>
+  <EntityType Name="SysCompaniasModulos">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdCompania" Type="int" />
+    <Property Name="IdModulo" Type="varchar" MaxLength="10" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="60" />
+    <Property Name="ClaveActivacion" Type="text" Nullable="false" />
+    <Property Name="lstatus" Type="bit" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="SysEstados">
+    <Key>
+      <PropertyRef Name="IdEstado" />
+    </Key>
+    <Property Name="IdEstado" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="IdPais" Type="varchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SysForm">
+    <Key>
+      <PropertyRef Name="IdForm" />
+    </Key>
+    <Property Name="IdForm" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="IdModulo" Type="varchar" MaxLength="10" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="SysFormAccesos">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdCompania" Type="int" />
+    <Property Name="IdGrupoUsuario" Type="varchar" MaxLength="20" />
+    <Property Name="IdModulo" Type="varchar" MaxLength="10" />
+    <Property Name="IdForm" Type="varchar" MaxLength="60" />
+    <Property Name="Consultar" Type="bit" />
+    <Property Name="Nuevo" Type="bit" />
+    <Property Name="Editar" Type="bit" />
+    <Property Name="Eliminar" Type="bit" />
+    <Property Name="Imprimir" Type="bit" />
+  </EntityType>
+  <EntityType Name="SysModulos">
+    <Key>
+      <PropertyRef Name="IdModulo" />
+    </Key>
+    <Property Name="IdModulo" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="60" />
+  </EntityType>
+  <EntityType Name="SysPaises">
+    <Key>
+      <PropertyRef Name="IdPais" />
+    </Key>
+    <Property Name="IdPais" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="40" />
+  </EntityType>
+  <EntityType Name="SysProcesos">
+    <Key>
+      <PropertyRef Name="IdProceso" />
+    </Key>
+    <Property Name="IdProceso" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="IdModulo" Type="varchar" MaxLength="10" />
+    <Property Name="IdForm" Type="varchar" MaxLength="60" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="SysProcesosAccesos">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdCompania" Type="int" />
+    <Property Name="IdGrupoUsuario" Type="varchar" MaxLength="20" />
+    <Property Name="IdModulo" Type="varchar" MaxLength="10" />
+    <Property Name="IdForm" Type="varchar" MaxLength="60" />
+    <Property Name="IdProceso" Type="varchar" MaxLength="60" />
+    <Property Name="Acceso" Type="bit" />
+  </EntityType>
+  <EntityType Name="SysUsuarios">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdUsuario" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="60" />
+    <Property Name="Clave" Type="varchar" MaxLength="100" />
+    <Property Name="IdGrupoUsuario" Type="varchar" MaxLength="20" />
+    <Property Name="IdCompania" Type="int" />
+    <Property Name="Direccion" Type="varchar" MaxLength="100" />
+    <Property Name="Telefono" Type="varchar" MaxLength="15" />
+    <Property Name="Notas" Type="text" />
+    <Property Name="Skin" Type="varchar" MaxLength="50" />
+    <Property Name="TiempoVisibleInicio" Type="varchar" MaxLength="10" />
+    <Property Name="TiempoVisibleFinal" Type="varchar" MaxLength="10" />
+    <Property Name="TiempoTrabajoInicio" Type="varchar" MaxLength="10" />
+    <Property Name="TiempoTrabajoFinal" Type="varchar" MaxLength="10" />
+    <Property Name="TiempoEscala" Type="varchar" MaxLength="10" />
+    <Property Name="UsuarioAdmin" Type="bit" Nullable="false" />
+    <Property Name="UsuarioDeCaja" Type="bit" Nullable="false" />
+    <Property Name="TurnoAbierto" Type="bit" Nullable="false" />
+    <Property Name="FechaCreado" Type="datetime" />
+    <Property Name="lStatus" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SysUsuariosGrupos">
+    <Key>
+      <PropertyRef Name="IdGrupoUsuario" />
+    </Key>
+    <Property Name="IdGrupoUsuario" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="60" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'CtrlSetup_Test.dbo.viewPaises' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="viewPaises">
+    <Key>
+      <PropertyRef Name="IdPais" />
+      <PropertyRef Name="IdEstado" />
+      <PropertyRef Name="Estado" />
+      <PropertyRef Name="IdCiudad" />
+      <PropertyRef Name="Ciudad" />
+    </Key>
+    <Property Name="IdPais" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="Pais" Type="varchar" MaxLength="40" />
+    <Property Name="IdEstado" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="Estado" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="IdCiudad" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="Ciudad" Type="varchar" MaxLength="40" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_SysCompanias_SysFormAccesos">
+    <End Role="SysCompanias" Type="Self.SysCompanias" Multiplicity="0..1" />
+    <End Role="SysFormAccesos" Type="Self.SysFormAccesos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysCompanias">
+        <PropertyRef Name="IdCompania" />
+      </Principal>
+      <Dependent Role="SysFormAccesos">
+        <PropertyRef Name="IdCompania" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SysCompanias_SysProcesosAccesos">
+    <End Role="SysCompanias" Type="Self.SysCompanias" Multiplicity="0..1" />
+    <End Role="SysProcesosAccesos" Type="Self.SysProcesosAccesos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysCompanias">
+        <PropertyRef Name="IdCompania" />
+      </Principal>
+      <Dependent Role="SysProcesosAccesos">
+        <PropertyRef Name="IdCompania" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SysEstados_SysCiudades">
+    <End Role="SysEstados" Type="Self.SysEstados" Multiplicity="1" />
+    <End Role="SysCiudades" Type="Self.SysCiudades" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysEstados">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="SysCiudades">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SysForm_SysFormAccesos">
+    <End Role="SysForm" Type="Self.SysForm" Multiplicity="0..1" />
+    <End Role="SysFormAccesos" Type="Self.SysFormAccesos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysForm">
+        <PropertyRef Name="IdForm" />
+      </Principal>
+      <Dependent Role="SysFormAccesos">
+        <PropertyRef Name="IdForm" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SysForm_SysProcesosAccesos">
+    <End Role="SysForm" Type="Self.SysForm" Multiplicity="0..1" />
+    <End Role="SysProcesosAccesos" Type="Self.SysProcesosAccesos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysForm">
+        <PropertyRef Name="IdForm" />
+      </Principal>
+      <Dependent Role="SysProcesosAccesos">
+        <PropertyRef Name="IdForm" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SysGrupos_SysUsuarios">
+    <End Role="SysUsuariosGrupos" Type="Self.SysUsuariosGrupos" Multiplicity="0..1" />
+    <End Role="SysUsuarios" Type="Self.SysUsuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysUsuariosGrupos">
+        <PropertyRef Name="IdGrupoUsuario" />
+      </Principal>
+      <Dependent Role="SysUsuarios">
+        <PropertyRef Name="IdGrupoUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SysModulos_SysForm">
+    <End Role="SysModulos" Type="Self.SysModulos" Multiplicity="0..1" />
+    <End Role="SysForm" Type="Self.SysForm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysModulos">
+        <PropertyRef Name="IdModulo" />
+      </Principal>
+      <Dependent Role="SysForm">
+        <PropertyRef Name="IdModulo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SysPaises_SysEstados">
+    <End Role="SysPaises" Type="Self.SysPaises" Multiplicity="1" />
+    <End Role="SysEstados" Type="Self.SysEstados" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysPaises">
+        <PropertyRef Name="IdPais" />
+      </Principal>
+      <Dependent Role="SysEstados">
+        <PropertyRef Name="IdPais" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SysProcesos_SysProcesosAccesos">
+    <End Role="SysProcesos" Type="Self.SysProcesos" Multiplicity="0..1" />
+    <End Role="SysProcesosAccesos" Type="Self.SysProcesosAccesos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysProcesos">
+        <PropertyRef Name="IdProceso" />
+      </Principal>
+      <Dependent Role="SysProcesosAccesos">
+        <PropertyRef Name="IdProceso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SysUsuariosGrupos_SysFormAccesos">
+    <End Role="SysUsuariosGrupos" Type="Self.SysUsuariosGrupos" Multiplicity="0..1" />
+    <End Role="SysFormAccesos" Type="Self.SysFormAccesos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysUsuariosGrupos">
+        <PropertyRef Name="IdGrupoUsuario" />
+      </Principal>
+      <Dependent Role="SysFormAccesos">
+        <PropertyRef Name="IdGrupoUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SysUsuariosGrupos_SysProcesosAccesos">
+    <End Role="SysUsuariosGrupos" Type="Self.SysUsuariosGrupos" Multiplicity="0..1" />
+    <End Role="SysProcesosAccesos" Type="Self.SysProcesosAccesos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysUsuariosGrupos">
+        <PropertyRef Name="IdGrupoUsuario" />
+      </Principal>
+      <Dependent Role="SysProcesosAccesos">
+        <PropertyRef Name="IdGrupoUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_InsertSysFormAccesos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdCompania" Type="int" Mode="In" />
+    <Parameter Name="IdGrupoUsuario" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_InsertSysProcesosAccesos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdCompania" Type="int" Mode="In" />
+    <Parameter Name="IdGrupoUsuario" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="CtrlSetup_TestModelStoreContainer">
+    <EntitySet Name="SysCiudades" EntityType="Self.SysCiudades" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SysCompanias" EntityType="Self.SysCompanias" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SysCompaniasModulos" EntityType="Self.SysCompaniasModulos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SysEstados" EntityType="Self.SysEstados" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SysForm" EntityType="Self.SysForm" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SysFormAccesos" EntityType="Self.SysFormAccesos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SysModulos" EntityType="Self.SysModulos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SysPaises" EntityType="Self.SysPaises" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SysProcesos" EntityType="Self.SysProcesos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SysProcesosAccesos" EntityType="Self.SysProcesosAccesos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SysUsuarios" EntityType="Self.SysUsuarios" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SysUsuariosGrupos" EntityType="Self.SysUsuariosGrupos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="viewPaises" EntityType="Self.viewPaises" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [viewPaises].[IdPais] AS [IdPais], 
+    [viewPaises].[Pais] AS [Pais], 
+    [viewPaises].[IdEstado] AS [IdEstado], 
+    [viewPaises].[Estado] AS [Estado], 
+    [viewPaises].[IdCiudad] AS [IdCiudad], 
+    [viewPaises].[Ciudad] AS [Ciudad]
+    FROM [dbo].[viewPaises] AS [viewPaises]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_SysCompanias_SysFormAccesos" Association="Self.FK_SysCompanias_SysFormAccesos">
+      <End Role="SysCompanias" EntitySet="SysCompanias" />
+      <End Role="SysFormAccesos" EntitySet="SysFormAccesos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SysCompanias_SysProcesosAccesos" Association="Self.FK_SysCompanias_SysProcesosAccesos">
+      <End Role="SysCompanias" EntitySet="SysCompanias" />
+      <End Role="SysProcesosAccesos" EntitySet="SysProcesosAccesos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SysEstados_SysCiudades" Association="Self.FK_SysEstados_SysCiudades">
+      <End Role="SysEstados" EntitySet="SysEstados" />
+      <End Role="SysCiudades" EntitySet="SysCiudades" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SysForm_SysFormAccesos" Association="Self.FK_SysForm_SysFormAccesos">
+      <End Role="SysForm" EntitySet="SysForm" />
+      <End Role="SysFormAccesos" EntitySet="SysFormAccesos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SysForm_SysProcesosAccesos" Association="Self.FK_SysForm_SysProcesosAccesos">
+      <End Role="SysForm" EntitySet="SysForm" />
+      <End Role="SysProcesosAccesos" EntitySet="SysProcesosAccesos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SysGrupos_SysUsuarios" Association="Self.FK_SysGrupos_SysUsuarios">
+      <End Role="SysUsuariosGrupos" EntitySet="SysUsuariosGrupos" />
+      <End Role="SysUsuarios" EntitySet="SysUsuarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SysModulos_SysForm" Association="Self.FK_SysModulos_SysForm">
+      <End Role="SysModulos" EntitySet="SysModulos" />
+      <End Role="SysForm" EntitySet="SysForm" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SysPaises_SysEstados" Association="Self.FK_SysPaises_SysEstados">
+      <End Role="SysPaises" EntitySet="SysPaises" />
+      <End Role="SysEstados" EntitySet="SysEstados" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SysProcesos_SysProcesosAccesos" Association="Self.FK_SysProcesos_SysProcesosAccesos">
+      <End Role="SysProcesos" EntitySet="SysProcesos" />
+      <End Role="SysProcesosAccesos" EntitySet="SysProcesosAccesos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SysUsuariosGrupos_SysFormAccesos" Association="Self.FK_SysUsuariosGrupos_SysFormAccesos">
+      <End Role="SysUsuariosGrupos" EntitySet="SysUsuariosGrupos" />
+      <End Role="SysFormAccesos" EntitySet="SysFormAccesos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SysUsuariosGrupos_SysProcesosAccesos" Association="Self.FK_SysUsuariosGrupos_SysProcesosAccesos">
+      <End Role="SysUsuariosGrupos" EntitySet="SysUsuariosGrupos" />
+      <End Role="SysProcesosAccesos" EntitySet="SysProcesosAccesos" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
