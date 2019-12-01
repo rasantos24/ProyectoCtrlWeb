@@ -101,3 +101,4 @@ D:\Universidad\Practica Profesional Fase 2\CtrlWebT\bin\Microsoft.CodeDom.Provid
 D:\Universidad\Practica Profesional Fase 2\CtrlWebT\obj\Debug\CtrlWebT.csproj.CopyComplete
 D:\Universidad\Practica Profesional Fase 2\CtrlWebT\obj\Debug\CtrlWebT.dll
 D:\Universidad\Practica Profesional Fase 2\CtrlWebT\obj\Debug\CtrlWebT.pdb
+D:\Universidad\Practica Profesional Fase 2\CtrlWebT\obj\Debug\CtrlWebT.csprojAssemblyReference.cache

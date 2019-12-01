@@ -1,0 +1,48 @@
+﻿@model List<Inventario>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Inventario</title>
+</head>
+<body>
+    <div>
+        <table class="table">
+            <tr>
+                <th>NumeroID</th>
+                <th>NoInventario</th>
+                <th>IdBin</th>
+                <th>IdProducto</th>
+                <th>Costo</th>
+                <th>Cantidad</th>
+                <th>Conteo</th>
+                <th>Diferencia</th>
+                <th>TotalCantidad</th>
+                <th>TotalConteo</th>
+                <th>TotalDiferencia</th>
+            </tr>
+            @foreach (var p in Model)
+            {
+                <tr>
+                    <td>@p.NuId</td>
+                    <td>@p.NoInventario</td>
+                    <td>@p.IdBin</td>
+                    <td>@p.IdProd</td>
+                    <td>@p.Costo</td>
+                    <td>@p.Cantidad</td>
+                    <td>@p.Conteo</td>
+                    <td>@p.Diferencia</td>
+                    <td>@p.TotalCantidad</td>
+                    <td>@p.TotalConteo</td>
+                    <td>@p.totalDiferencia</td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>
